@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AcmeCompany.FizzBussinator.Console
+namespace AcmeCompany.FizzBuzzinator.Console
 {
     public class Program
     {
@@ -13,7 +13,7 @@ namespace AcmeCompany.FizzBussinator.Console
             //this just happens to match the 'default' config as well
             var config = new Dictionary<int, string>() { { 3, "fizz" }, { 5, "buzz" } };
 
-            var fizzBuzzinator = new FizzBuzzinator(config);
+            var fizzBuzzinator = new Generator(config);
 
             for (int i = 0; i < max; i++)
             {

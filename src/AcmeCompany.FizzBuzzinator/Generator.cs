@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AcmeCompany.FizzBussinator
+namespace AcmeCompany.FizzBuzzinator
 {
-    public class FizzBuzzinator
+    public class Generator
     {
         //Default config
         private readonly IDictionary<int, string> _defaultConfig = new Dictionary<int, string>() { { 3, "fizz" }, { 5, "buzz" } };
         private readonly IDictionary<int, string> _runtimeConfig;
 
-        public FizzBuzzinator(IDictionary<int, string> config = null)
+        public Generator(IDictionary<int, string> config = null)
         {
             _runtimeConfig = config ?? _defaultConfig;
         }

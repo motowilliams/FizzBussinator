@@ -7,8 +7,8 @@
     <ProjectGuid>{72445776-5381-4280-8517-B7AF72BF3CBF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AcmeCompany.FizzBussinator</RootNamespace>
-    <AssemblyName>AcmeCompany.FizzBussinator</AssemblyName>
+    <RootNamespace>AcmeCompany.FizzBuzzinator</RootNamespace>
+    <AssemblyName>AcmeCompany.FizzBuzzinator</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,7 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FizzBuzzinator.cs" />
+    <Compile Include="Generator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

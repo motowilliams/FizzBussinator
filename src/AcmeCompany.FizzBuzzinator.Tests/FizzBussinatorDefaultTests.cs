@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using AcmeCompany.FizzBuzzinator;
 using Should;
 using Xunit;
 using Xunit.Abstractions;
@@ -9,18 +10,18 @@ namespace AcmeCompany.FizzBussinator.Tests
     public class FizzBussinatorDefaultTests
     {
         private readonly ITestOutputHelper output;
-        private FizzBuzzinator fizzBuzzinator;
+        private Generator generator;
 
         public FizzBussinatorDefaultTests(ITestOutputHelper output)
         {
             this.output = output;
-            fizzBuzzinator = new FizzBuzzinator();
+            generator = new Generator();
         }
 
         [Fact]
         public void should_return_one_for_fizzbuzzless_input()
         {
-            string result = fizzBuzzinator.Fizzer(1);
+            string result = generator.Fizzer(1);
 
             result.ShouldEqual("1");
         }
@@ -28,7 +29,7 @@ namespace AcmeCompany.FizzBussinator.Tests
         [Fact]
         public void should_return_fizz_for_fizz_input()
         {
-            string result = fizzBuzzinator.Fizzer(3);
+            string result = generator.Fizzer(3);
 
             result.ShouldEqual("fizz");
         }
@@ -36,7 +37,7 @@ namespace AcmeCompany.FizzBussinator.Tests
         [Fact]
         public void should_return_buzz_for_buzz_input()
         {
-            string result = fizzBuzzinator.Fizzer(5);
+            string result = generator.Fizzer(5);
 
             result.ShouldEqual("buzz");
         }
@@ -44,7 +45,7 @@ namespace AcmeCompany.FizzBussinator.Tests
         [Fact]
         public void should_return_fizzbuzz_for_fizzbuzz_input()
         {
-            string result = fizzBuzzinator.Fizzer(15);
+            string result = generator.Fizzer(15);
 
             result.ShouldEqual("fizzbuzz");
         }
@@ -52,7 +53,7 @@ namespace AcmeCompany.FizzBussinator.Tests
         [Theory, MemberData("FizzTestData")]
         public void should_run_dataset(int number, string message)
         {
-            fizzBuzzinator.Fizzer(number).ShouldEqual(message);
+            generator.Fizzer(number).ShouldEqual(message);
         }
 
         public static IEnumerable<object> FizzTestData()
